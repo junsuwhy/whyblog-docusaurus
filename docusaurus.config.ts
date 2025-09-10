@@ -34,8 +34,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
+    defaultLocale: 'zh-Hant',
+    locales: ['zh-Hant', 'en'],
   },
 
   presets: [
@@ -70,7 +70,7 @@ const config: Config = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
-        language: ['en', 'zh'],
+        language: ['zh', 'en'],
         indexDocs: true,
         indexBlog: true,
         indexPages: false,
@@ -91,12 +91,27 @@ const config: Config = {
       },
       items: [
         {
+          to: '/',
+          label: '首頁',
+          position: 'left',
+          activeBaseRegex: '^/$',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: '文件',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: '部落格', position: 'left'},
+        {
+          to: '/about',
+          label: '關於',
+          position: 'left',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://github.com/junsuwhy/whyblog-docusaurus',
           label: 'GitHub',
@@ -108,29 +123,54 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: '文件',
           items: [
             {
-              label: 'Getting Started',
+              label: '快速開始',
               to: '/docs/intro',
+            },
+            {
+              label: '建立頁面',
+              to: '/docs/tutorial-basics/create-a-page',
             },
           ],
         },
         {
-          title: 'More',
+          title: '社群',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/junsuwhy/whyblog-docusaurus',
             },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/docusaurus',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/junsuwhy',
+            },
+          ],
+        },
+        {
+          title: '更多',
+          items: [
+            {
+              label: '部落格',
+              to: '/blog',
+            },
+            {
+              label: '關於',
+              to: '/about',
+            },
+            {
+              label: 'RSS',
+              href: '/blog/rss.xml',
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Blog & Knowledge Base. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} My Blog & Knowledge Base. 使用 Docusaurus 建置。`,
     },
     prism: {
       theme: prismThemes.github,
