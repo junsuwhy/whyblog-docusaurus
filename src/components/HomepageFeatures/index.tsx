@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
+    title: '📚 知識分享',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        整理技術學習筆記、經驗分享與深度思考，建構完整的知識體系。
+        透過結構化的文件管理，讓知識更容易被找到和應用。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '✍️ 部落格紀錄',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        分享開發心得、專案經歷與技術探索過程。
+        記錄成長路上的點點滴滴，與社群交流學習。
+      </>
+    ),
+  },
+  {
+    title: '🔍 智慧搜尋',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        內建中英文搜尋功能，支援全站內容快速檢索。
+        讓您輕鬆找到需要的文章和技術文件。
       </>
     ),
   },
