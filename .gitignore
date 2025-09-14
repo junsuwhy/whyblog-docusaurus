@@ -1,7 +1,7 @@
 content
 blog
 docs
-static
+# static - 需要追蹤 static 目錄中的檔案用於 GitHub Actions 建置
 
 # Dependencies
 /node_modules
