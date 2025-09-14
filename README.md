@@ -81,6 +81,25 @@ npm run serve
 - 🌐 **線上網站**: [GitHub Pages](https://junsuwhy.github.io/whyblog-docusaurus/)
 - 📚 **Docusaurus 文檔**: [docusaurus.io](https://docusaurus.io/)
 
+## GitHub Actions 設定
+
+### 必要的 Secrets 和 Variables
+
+**內容倉庫設定：**
+- `REPO_DISPATCH_TOKEN`: Personal Access Token (需要 public_repo 權限)
+- `APP_REPO_NAME` (Variable): 應用程式倉庫名稱，設定為 `junsuwhy/whyblog-docusaurus`
+
+**應用程式倉庫設定：**
+- `CONTENT_REPO_TOKEN`: Personal Access Token (需要讀取內容倉庫權限)
+- GitHub Pages 權限：Settings > Actions > General 啟用 "Read and write permissions"
+
+### 故障排除
+
+**常見問題：**
+1. repository_dispatch 未觸發 → 檢查 token 權限
+2. 內容檢出失敗 → 驗證 CONTENT_REPO_TOKEN
+3. 建置失敗 → 檢查內容格式與設定檔
+
 ## 開發與貢獻
 
 如需修改網站功能或樣式，請在本倉庫進行開發。

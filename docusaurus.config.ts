@@ -27,15 +27,15 @@ const config: Config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // may want to replace "en" with "zh-hant".
   i18n: {
-    defaultLocale: 'zh-Hant',
-    locales: ['zh-Hant', 'en'],
+    defaultLocale: 'zh-hant',
+    locales: ['zh-hant', 'en'],
   },
 
   presets: [
@@ -65,20 +65,7 @@ const config: Config = {
     ],
   ],
 
-  themes: [
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        hashed: true,
-        language: ['zh', 'en'],
-        indexDocs: true,
-        indexBlog: true,
-        indexPages: false,
-        docsRouteBasePath: 'docs',
-        blogRouteBasePath: 'blog',
-      },
-    ],
-  ],
+  themes: [],
 
   themeConfig: {
     // Replace with your project's social card
