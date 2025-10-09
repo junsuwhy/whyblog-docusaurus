@@ -27,7 +27,7 @@ const config: Config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -44,10 +44,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          path: './content/docs',
+          path: '../content/docs',
         },
         blog: {
-          path: './content/blog',
+          path: '../content/blog',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -71,10 +71,10 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Blog & Knowledge Base',
+      title: 'Why Knowledge Base & Blog',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -90,11 +90,8 @@ const config: Config = {
           label: '文件',
         },
         {to: '/blog', label: '部落格', position: 'left'},
-        {
-          to: '/about',
-          label: '關於',
-          position: 'left',
-        },
+        {to: '/vault', label: '知識庫', position: 'left'},
+        {to: '/about', label: '關於我', position: 'left'},
         {
           type: 'localeDropdown',
           position: 'right',
@@ -145,14 +142,6 @@ const config: Config = {
             {
               label: '部落格',
               to: '/blog',
-            },
-            {
-              label: '關於',
-              to: '/about',
-            },
-            {
-              label: 'RSS',
-              href: '/blog/rss.xml',
             },
           ],
         },

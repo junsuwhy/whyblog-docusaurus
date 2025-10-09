@@ -6,28 +6,49 @@
  */
 
 /* ===== 字型系統 ===== */
+/* Google Fonts 預載入與回退機制 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
 :root {
-  /* 中文字型堆疊：優先使用系統字型，提升載入速度 */
+  /* 中文字型堆疊：優先使用 Google Fonts，搭配系統字型回退 */
   --ifm-font-family-base: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 
     'Helvetica Neue', Helvetica, Arial, sans-serif;
   --ifm-font-family-monospace: 'Fira Code', 'SF Mono', Monaco, 'Cascadia Code', 
     'Roboto Mono', Consolas, 'Courier New', monospace;
+    
+  /* 字型載入最佳化設定 */
+  font-display: swap; /* 避免 FOIT (Flash of Invisible Text) */
 }
 
 /* ===== 色彩方案設計 ===== */
 :root {
-  /* 主色調：現代藍綠色系，適合知識分享平台 */
-  --ifm-color-primary: #0066CC;
-  --ifm-color-primary-dark: #005BB8;
-  --ifm-color-primary-darker: #0056B0;
-  --ifm-color-primary-darkest: #004691;
-  --ifm-color-primary-light: #1A75D9;
-  --ifm-color-primary-lighter: #2980E6;
-  --ifm-color-primary-lightest: #4D94F2;
+  /* 主色調：橘色系，體現活力與創新 */
+  --ifm-color-primary: #F05E1C;
+  --ifm-color-primary-dark: #E5551A;
+  --ifm-color-primary-darker: #D64F17;
+  --ifm-color-primary-darkest: #B34214;
+  --ifm-color-primary-light: #F2731E;
+  --ifm-color-primary-lighter: #F58842;
+  --ifm-color-primary-lightest: #FF8C42;
 
   /* 輔助色彩 */
   --ifm-color-success: #00A86B;
   --ifm-color-info: #3498DB;
+  
+  /* ===== 響應式斷點系統 ===== */
+  /* 基於 Tailwind CSS 響應式斷點設計 */
+  --breakpoint-mobile: 640px;      /* sm: 640px 以上為大手機 */
+  --breakpoint-tablet: 768px;      /* md: 768px 以上為平板 */
+  --breakpoint-desktop: 1024px;    /* lg: 1024px 以上為桌面 */
+  --breakpoint-large: 1280px;      /* xl: 1280px 以上為大螢幕 */
+  --breakpoint-xlarge: 1536px;     /* 2xl: 1536px 以上為超大螢幕 */
+  
+  /* Homepage 特定 CSS 變數 */
+  --homepage-container-max-width: 1200px;
+  --homepage-section-spacing: 6rem;
+  --homepage-border-radius: 0.75rem;
+  --homepage-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --homepage-transition: all 0.3s ease;
   --ifm-color-warning: #F39C12;
   --ifm-color-danger: #E74C3C;
 
@@ -56,14 +77,14 @@
 
 /* ===== 深色模式色彩方案 ===== */
 [data-theme='dark'] {
-  /* 深色模式主色調：更亮的藍色，確保對比度 */
-  --ifm-color-primary: #3498DB;
-  --ifm-color-primary-dark: #2E86C1;
-  --ifm-color-primary-darker: #2980B9;
-  --ifm-color-primary-darkest: #21618C;
-  --ifm-color-primary-light: #5DADE2;
-  --ifm-color-primary-lighter: #76D7C4;
-  --ifm-color-primary-lightest: #85C1E9;
+  /* 深色模式主色調：較亮的橘色，確保對比度 */
+  --ifm-color-primary: #FF8C42;
+  --ifm-color-primary-dark: #F58842;
+  --ifm-color-primary-darker: #F2731E;
+  --ifm-color-primary-darkest: #E5551A;
+  --ifm-color-primary-light: #FFA366;
+  --ifm-color-primary-lighter: #FFB380;
+  --ifm-color-primary-lightest: #FFC499;
 
   /* 深色模式背景 */
   --ifm-background-color: #1A1A1A;

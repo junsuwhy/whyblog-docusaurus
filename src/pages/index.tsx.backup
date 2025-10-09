@@ -1,0 +1,47 @@
+import type {ReactNode} from 'react';
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import LatestPosts from '@site/src/components/LatestPosts';
+import Heading from '@theme/Heading';
+
+import styles from './index.module.css';
+
+function HomepageHeader() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <header className={clsx(styles.heroBanner)}>
+      <div className={styles.heroContent}>
+        <div className="container">
+          <Heading as="h1" className={styles.heroTitle}>
+            Ycat 的個人成長知識庫
+          </Heading>
+          <p className={styles.heroSubtitle}>
+            只有用心靈才能看見真實的東西，真正重要的東西不是用眼睛可以看見的。
+            <span className={styles.heroAuthor}>──聖修伯里</span>
+          </p>
+        </div>
+      </div>
+      {/* Decorative background elements */}
+      <div className={styles.decoration1}></div>
+      <div className={styles.decoration2}></div>
+    </header>
+  );
+}
+
+export default function Home(): ReactNode {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <Layout
+      title="Ycat 的個人成長知識庫"
+      description="只有用心靈才能看見真實的東西，真正重要的東西不是用眼睛可以看見的。──聖修伯里">
+      <div className={styles.pageWrapper}>
+        <HomepageHeader />
+        <main>
+          <LatestPosts />
+        </main>
+      </div>
+    </Layout>
+  );
+}
