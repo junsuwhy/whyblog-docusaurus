@@ -35,7 +35,8 @@ const config: Config = {
   // may want to replace "en" with "zh-hant".
   i18n: {
     defaultLocale: 'zh-hant',
-    locales: ['zh-hant', 'en'],
+    // locales: ['zh-hant', 'en'],
+    locales: ['zh-hant'],
   },
 
   presets: [
@@ -44,10 +45,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          path: './content/docs',
+          path: '../content/docs',
         },
         blog: {
-          path: './content/blog',
+          path: '../content/blog',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
