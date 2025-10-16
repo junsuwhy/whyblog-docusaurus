@@ -4,6 +4,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+// Environment-based content paths
+const isCI = process.env.CI === 'true';
+const contentBasePath = isCI ? './content' : '../content';
+
 const config: Config = {
   title: 'My Blog & Knowledge Base',
   tagline: 'Powered by Docusaurus',
@@ -45,10 +49,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          path: '../content/docs',
+          path: `${contentBasePath}/docs`,
         },
         blog: {
-          path: '../content/blog',
+          path: `${contentBasePath}/blog`,
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],

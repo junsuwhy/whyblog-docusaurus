@@ -29,7 +29,7 @@ jobs:
         with:
           repository: ${{ env.CONTENT_REPO }}
           token: ${{ secrets.CONTENT_REPO_TOKEN }}
-          path: ../content
+          path: ./content
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
