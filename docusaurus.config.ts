@@ -111,59 +111,6 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: '文件',
-          items: [
-            {
-              label: '快速開始',
-              to: '/docs/intro',
-            },
-            {
-              label: '建立頁面',
-              to: '/docs/tutorial-basics/create-a-page',
-            },
-          ],
-        },
-        {
-          title: '社群',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/junsuwhy/whyblog-docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/junsuwhy',
-            },
-          ],
-        },
-        {
-          title: '更多',
-          items: [
-            {
-              label: '部落格',
-              to: '/blog',
-            },
-            {
-              label: '關於',
-              to: '/about',
-            },
-            {
-              label: 'RSS',
-              href: '/blog/rss.xml',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Blog & Knowledge Base. 使用 Docusaurus 建置。`,
-    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
