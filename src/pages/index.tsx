@@ -19,12 +19,12 @@ function HeroSection() {
         <div className={styles.heroButtons}>
           <Link
             className={`${styles.btn} ${styles.btnPrimary}`}
-            to="#content">
+            to="/#content">
             瀏覽核心內容
           </Link>
           <Link
             className={`${styles.btn} ${styles.btnSecondary}`}
-            to="#about">
+            to="/#about">
             更認識我
           </Link>
         </div>
@@ -101,7 +101,7 @@ function ContentSection() {
             <div className={styles.cardButtonWrapper}>
               <Link
                 className={`${styles.btn} ${styles.btnSecondary} ${styles.btnFullWidth}`}
-                to="/docs">
+                to="/docs/intro">
                 探索知識庫
               </Link>
             </div>
