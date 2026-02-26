@@ -29,7 +29,9 @@ const config: Config = {
   organizationName: 'junsuwhy', // Usually your GitHub org/user name.
   projectName: 'whyblog-docusaurus', // Usually your repo name.
   deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+  // GitHub Pages is a static host (no rewrite rules). Use trailing slashes so
+  // routes like /docs/intro/ map to /docs/intro/index.html.
+  trailingSlash: true,
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
