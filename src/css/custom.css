@@ -98,6 +98,17 @@
   z-index: 9998;
 }
 
+/* Some mobile browsers can end up with a "blank" sidebar due to layout/height issues.
+   Force the sidebar items area to occupy the full remaining viewport height. */
+.navbar-sidebar__items {
+  height: calc(100vh - var(--ifm-navbar-height));
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.navbar-sidebar__item {
+  background-color: var(--ifm-navbar-background-color);
+}
+
 [data-theme='dark'] .navbar {
   background-color: rgba(26, 26, 26, 0.95);
   border-bottom-color: rgba(255, 255, 255, 0.1);
