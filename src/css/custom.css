@@ -98,15 +98,26 @@
   z-index: 9998;
 }
 
-/* Some mobile browsers can end up with a "blank" sidebar due to layout/height issues.
-   Force the sidebar items area to occupy the full remaining viewport height. */
+/* Some mobile browsers can end up with a "blank" or cramped sidebar due to layout/height issues.
+   Force the sidebar items area to occupy the full remaining viewport height and allow scrolling. */
 .navbar-sidebar__items {
   height: calc(100vh - var(--ifm-navbar-height));
   background-color: var(--ifm-navbar-background-color);
+  align-items: stretch;
 }
 
+/* Make the menu column fill the available height and scroll normally */
 .navbar-sidebar__item {
   background-color: var(--ifm-navbar-background-color);
+  height: 100%;
+}
+
+.navbar-sidebar__item.menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 [data-theme='dark'] .navbar {
