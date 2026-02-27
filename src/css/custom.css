@@ -110,12 +110,15 @@
 .navbar-sidebar__item {
   background-color: var(--ifm-navbar-background-color);
   height: 100%;
+  /* Let the menu column grow to fill the sidebar height */
+  flex: 1 0 auto;
 }
 
 .navbar-sidebar__item.menu {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1 0 auto;
+  min-height: 0; /* allow overflow-y to work inside flex */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
